@@ -1,0 +1,60 @@
+%zaglavie-main {
+  text-transform: uppercase;
+}
+
+@keyframes jump{
+  0%{
+    top: 50px;
+  }
+  50%{
+    top: 140px;
+    height: 200px;
+  }
+  55%{
+    top: 160px;
+    height: 120px;
+    border-radius: 60%;
+  }
+  65%{
+    top: 120px;
+    height: 140px;
+    border-radius: 50%;
+  }
+  100%{
+    top: 50px;
+  }
+}
+
+h1 {
+  color: red;
+
+  span {
+    font-weight: bold;
+  }
+
+  &.heading1 {
+    font-size: 2em;
+    @extend %zaglavie-main;
+  }
+
+}
+
+div.box {
+  width: 200px;
+  height: 200px;
+  background-image: "images/ferarri.jpg";
+  background-color: blue;
+  @include border-radius(50%);
+  position: absolute;
+  animation: jump 1s infinite ease-in-out;
+}
+
+img.picture{
+  width: 200px;
+  height: 200px;
+  @include border-radius(50%);
+  position: absolute;
+  left: 50%;
+  top:50%;
+  animation: jump 1s infinite ease-in-out;
+}
