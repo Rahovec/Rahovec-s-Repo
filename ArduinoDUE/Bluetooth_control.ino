@@ -1,9 +1,7 @@
 #include "NAxisMotion.h"        
 #include <Wire.h>
 
-NAxisMotion mySensor;          
-unsigned long lastStreamTime = 0;     
-const int streamPeriod = 20;  
+NAxisMotion mySensor;
 
 void setup() {
   // initialize both serial ports:
