@@ -20,9 +20,9 @@ void loop() {
   if (Serial1.available()) {
     int inByte = Serial1.read();
     if(inByte == '1'){
-        mySensor.updateEuler();
+        mySensor.updateLinearAccel();
         //Serial1.write("lmao");
-        Serial1.print(mySensor.readEulerHeading());
+        Serial1.print(mySensor.readLinearAccelX());
       }
   }
 }
