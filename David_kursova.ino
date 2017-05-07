@@ -10,10 +10,11 @@ void setup (){
 void loop () 
 {
   sensorValue = analogRead (sensorPin);
+  
   digitalWrite (ledPin, HIGH);
-  digitalWrite (ledPin, LOW);
   if(sensorValue >= 100 ){
       PplCounter += 1;
+      digitalWrite (ledPin, LOW);
     }
   Serial.println (sensorValue, DEC);
   Serial.print (PplCounter);
