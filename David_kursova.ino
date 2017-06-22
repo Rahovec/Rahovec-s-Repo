@@ -21,10 +21,8 @@ void loop ()
     Serial.println (sensorValue, DEC);
     Serial.print (PplCounter);
     Serial.println(" people passed");
-    
-    delay(500);
   }
-  if(sensorValue >= 100 ){
+  if(sensorValue <= 100 ){
       MovementCounter = 0;
   }
   delay(500);
