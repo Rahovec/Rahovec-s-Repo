@@ -12,6 +12,7 @@ void loop ()
 {
   sensorValue = analogRead (sensorPin);
   while (MovementCounter == 0){
+    sensorValue = analogRead (sensorPin);
     digitalWrite (ledPin, HIGH);
     if(sensorValue >= 100 ){
         PplCounter += 1;
